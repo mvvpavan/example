@@ -34,6 +34,6 @@ public class FeedsWalrusTest {
 
 		subject.feed(gary, can);
 
-		assertThat(gary.hasEaten(food), is(true));
+		assertThat(gary.hasEaten(food), is(false));
 	}
 }
