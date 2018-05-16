@@ -1,0 +1,50 @@
+#!groovy
+
+
+
+node() {
+
+    stage('Checkout')
+
+    checkout scm
+
+
+
+    stage('Build')
+
+
+
+    #def mvnHome = tool 'Maven 3.3.x'
+
+    #env.JAVA_HOME = tool 'JDK 1.8'
+
+
+
+    if (isUnix()) {
+
+        sh "mvn -version"
+
+
+    } else {
+
+        bat "${mvnHome}\\bin\\mvn -version"
+
+        bat "${mvnHome}\\bin\\mvn -Prun-its clean verify"
+
+    }
+
+
+
+    stage('Local installation')
+
+    if (isUnix()) {
+
+        sh "mvn clean install"
+
+    } else {
+
+        bat "${mvnHome}\\bin\\mvn -DskipTests install"
+
+    }
+
+}
