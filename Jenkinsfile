@@ -5,8 +5,8 @@
 node() {
 
     stage('Checkout')
-
-    checkout scm
+    git branch: 'master', credentialsId: 'a43ef5e1-cb87-4045-b782-70c4db818374', url: 'https://github.com/mvvpavan/example.git'
+    
 
 
 
