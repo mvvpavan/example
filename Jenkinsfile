@@ -3,7 +3,9 @@
 
 
 node() {
-
+parameters {
+        booleanParam(defaultValue: true, description: '', name: 'userFlag')
+    }
     stage('Checkout')
     git credentialsId: 'a43ef5e1-cb87-4045-b782-70c4db818374', url: 'https://github.com/mvvpavan/example.git'
     
@@ -21,8 +23,9 @@ node() {
 
 
     if (isUnix()) {
-
+        echo "flag: ${params.userFlag}"
         sh "'${mvnHome}/bin/mvn' -version"
+            
 
 
     } else {
