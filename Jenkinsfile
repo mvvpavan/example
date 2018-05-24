@@ -22,7 +22,7 @@ node() {
 
     if (isUnix()) {
 
-        sh "mvn -version"
+        sh "'${mvnHome}/bin/mvn' -version"
 
 
     } else {
@@ -39,7 +39,7 @@ node() {
 
     if (isUnix()) {
 
-        sh "mvn clean install"
+        sh "'${mvnHome}/bin/mvn' clean install"
 
     } else {
 
