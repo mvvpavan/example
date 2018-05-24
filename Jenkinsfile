@@ -14,7 +14,7 @@ node() {
 
 
 
-    def mvnHome = tool 'Maven 3.5.3'
+    def mvnHome = tool 'maven'
 
     env.JAVA_HOME = tool 'JDK'
 
