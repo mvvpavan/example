@@ -24,7 +24,7 @@ parameters {
 
     if (isUnix()) {
         echo "flag: ${params.userFlag}"
-            if(${params.userFlag}==true)
+            if(userFlag==true)
             {
                     echo "adding flag "
                      sh "'${mvnHome}/bin/mvn' -version"
