@@ -27,6 +27,7 @@ parameters {
             if(userFlag==true)
             {
                     echo "adding flag "
+                    echo "ädding new line"
                      sh "'${mvnHome}/bin/mvn' -version"
             }
        
