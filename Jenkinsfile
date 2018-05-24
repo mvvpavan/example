@@ -22,7 +22,7 @@ node() {
 
     if (isUnix()) {
         
-                    echo "adding flag "
+                    echo "removed flag "
                     echo "ädding new line"
                      sh "'${mvnHome}/bin/mvn' -version"
            
