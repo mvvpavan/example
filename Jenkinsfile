@@ -1,5 +1,6 @@
 node() {
    // adds job parameters within jenkinsfile
+    properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/mvvpavan/example.git'], pipelineTriggers([githubPush()])])
    properties([
      parameters([
        booleanParam(
