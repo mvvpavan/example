@@ -27,3 +27,5 @@ node() {
    sh "echo sh isBar is ${params.isBar}"
    if (params.isBar) { print "this should display" }
 }
+
+
