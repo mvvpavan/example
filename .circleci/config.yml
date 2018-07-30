@@ -40,4 +40,4 @@ jobs:
       # run tests!
       - run: mvn clean install
       - store_artifacts:
-          path: /target
+          path: target/
